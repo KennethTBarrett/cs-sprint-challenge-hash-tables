@@ -37,7 +37,13 @@ When two items are hashed to the same position, we have to have a method to plac
 - delete() - O(n), iterates through available keys until a match is found, then removes the associated value.
 
 4. Load factor
+
+The load factor is simply the number of keys that are stored within our hash table, divided by the capacity of the hash table. The load factor is a measure of how full the hash table can get before capacity is automatically increased, which brings us to...
+
 5. Automatic resizing
+
+Automatic resizing means to rehash our hashtable based upon a need for increased capacity upon an insert (`.put()`). This need is determined by the load factor. This will increase the size of hash table, as well as map the current items in our hash table to new indices.
+
 6. Various use cases for hash tables
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
