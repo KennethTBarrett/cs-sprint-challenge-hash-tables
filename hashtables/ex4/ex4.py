@@ -2,8 +2,17 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
-
+    result = []
+    cache = {}
+    # Make entries for each number in our cache.
+    for number in a:
+        cache[number] = number
+    # Go through the cache. If the number * -1 exists
+    # in our cache, then we'll append it to our result
+    # array.
+    for number in a:
+        if number * -1 in cache and number > 0:
+            result.append(number)
     return result
 
 
