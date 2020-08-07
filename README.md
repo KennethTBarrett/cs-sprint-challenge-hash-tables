@@ -24,13 +24,18 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Hashing functions
 
-- A hash function is a function that maps keys to values. The values returned by hash functions are used to index a table of a fixed size, known as a hash table. This index is calculated by the hash function with the key as our input % the capacity of our hashtable.
+A hash function is a function that maps keys to values. The values returned by hash functions are used to index a table of a fixed size, known as a hash table. This index is calculated by the hash function with the key as our input % the capacity of our hashtable.
 
 2. Collision resolution
 
-- When two items are hashed to the same position, we have to have a method to place the second item in our hash table. This is known as collission resolution. The method used this week is known as `separate chaining` (with LinkedLists).
+When two items are hashed to the same position, we have to have a method to place the second item in our hash table. This is known as collission resolution. The method used this week is known as `separate chaining` (with LinkedLists).
 
 3. Performance of basic hash table operations
+
+- get() - O(n), iterates through our available keys until a matching key is found, then returns the value.
+- put() - O(n), iterates through available keys until a match is found, and overwrites the stored value. Alternatively, if no matching key is found, makes a new entry.
+- delete() - O(n), iterates through available keys until a match is found, then removes the associated value.
+
 4. Load factor
 5. Automatic resizing
 6. Various use cases for hash tables
