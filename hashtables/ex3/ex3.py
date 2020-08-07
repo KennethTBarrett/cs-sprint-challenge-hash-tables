@@ -2,7 +2,25 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    cache = {}
+    # Check each number in each subarray
+    # If the number isn't in the cache
+    # Make it an entry
+    for subarray in arrays:
+        for number in subarray:
+            if number not in cache:
+                # Its irrelevant what we set
+                # this value to, as we're going to
+                # be simply making a dict from our keys
+                # (using dict as a set essentially).
+                cache[number] = number
+            else:
+                # If it is in the cache, append
+                # to `result` array.
+                result.append(number)
+    # Make list w/ dictionary using the keys in `result`
+    result = list(dict.fromkeys(result))
 
     return result
 
