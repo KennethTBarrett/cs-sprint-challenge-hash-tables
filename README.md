@@ -46,6 +46,9 @@ Automatic resizing means to rehash our hashtable based upon a need for increased
 
 6. Various use cases for hash tables
 
+- Caching information, such as HTTP from a webpage, stored under a key of the URL.
+- Quick lookups of data by a key (similar to fetching data from PRIMARY KEY in SQL)
+
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
